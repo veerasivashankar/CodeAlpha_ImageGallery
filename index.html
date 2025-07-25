@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHIVA'S CHOCOLATE GLASS GALLERY</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="light-mode"> <a href="https://veerasivashankar.github.io/Siva_Portfolio/" target="_blank">
+     <img src="https://i.postimg.cc/Pr5T9JBM/Chat-GPT-Image-Jun-21-2025-11-17-11-PM.png" alt="Logo" class="top-left-logo" />
+   </a>
+  
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle" />
+      <span class="slider"></span>
+    </label>
+    <span class="toggle-label">Dark Mode</span> </div>
+
+  <h1 class="page-title">SHIVA'S GALLERY</h1>
+
+  <div class="gallery" id="gallery"></div>
+
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <span class="nav prev">&#10094;</span>
+    <img src="" alt="Full View" id="lightbox-img" />
+    <span class="nav next">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const modeToggle = document.getElementById("modeToggle");
+    const body = document.body;
+    const toggleLabel = document.querySelector(".toggle-label");
+
+    
+
+    modeToggle.addEventListener("change", () => {
+      body.classList.toggle("dark-mode"); 
+      if (body.classList.contains("dark-mode")) {
+        toggleLabel.textContent = "Light Mode";
+      } else {
+        toggleLabel.textContent = "Dark Mode";
+      }
+    });
+
+  </script>
+</body>
+</html>
